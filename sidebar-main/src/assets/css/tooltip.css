@@ -1,0 +1,87 @@
+.pnd-tooltip {
+  position: relative;
+  /* cursor: pointer; */
+}
+
+/* موقعیت بالا */
+.pnd-tooltip.tooltip-top::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-8px);
+}
+
+/* موقعیت پایین */
+.pnd-tooltip.tooltip-bottom::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(8px);
+}
+
+/* موقعیت چپ */
+.pnd-tooltip.tooltip-left::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(-8px);
+}
+
+/* موقعیت راست */
+.pnd-tooltip.tooltip-right::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%) translateX(8px);
+}
+
+.pnd-tooltip:hover::after {
+  opacity: 1;
+}
+
+.tooltip-box {
+  position: fixed;
+  background-color: var(--primary-100) !important;
+  color: white !important;
+  padding: 6px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease-in-out;
+  font-size: 13px;
+  z-index: 50;
+}
+
+/* فلش بالایی (تولتیپ زیر متن) */
+.tooltip-box.arrow-top::after {
+  content: "";
+  position: absolute;
+  bottom: 100%; /* بالای تولتیپ */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+}
+
+/* فلش پایینی (تولتیپ بالای متن) */
+.tooltip-box.arrow-bottom::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* پایین تولتیپ */
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.tooltip-box.arrow-top::after,
+.tooltip-box.arrow-bottom::after {
+  left: var(--arrow-left, 50%);
+}

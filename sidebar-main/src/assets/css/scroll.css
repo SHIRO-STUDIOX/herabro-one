@@ -1,0 +1,59 @@
+.sidebar-scroll-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 10px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.sidebar-scroll-content::-webkit-scrollbar { /* hover out side*/
+  width: 4px;
+  border-radius: 4px;
+  background: transparent !important;
+}
+
+.sidebar-scroll-content::-webkit-scrollbar-track {  /* default background */
+  background: transparent !important;
+  border-radius: 4px;
+}
+
+.sidebar-scroll-content::-webkit-scrollbar-thumb { /* selected background */
+  background: transparent !important;
+  border-radius: 4px;
+}
+
+.sidebar-scroll-content:hover::-webkit-scrollbar-track { /* default background on hover */
+  background: var(--secondary-24) !important;
+}
+
+.sidebar-scroll-content:hover::-webkit-scrollbar-thumb { /* selected background on hover */
+  background: var(--secondary-60) !important;
+}
+
+
+.sidebar-scroll-content:not(:hover) {
+  -ms-overflow-style: none;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-24) !important;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-24) !important;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--secondary-40) !important;
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--secondary-24) !important;
+}

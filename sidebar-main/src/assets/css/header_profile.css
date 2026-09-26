@@ -1,0 +1,29 @@
+.profile-card {
+  display: flex;
+  width: 304px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.profile-card-content {
+  background: var(--white-100);
+  margin-top: 12px;
+  width: 100%;
+  border-radius: 20px;
+  padding: 16px 16px 16px 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  box-shadow: 0px 0px 24px 0px var(--primary-6);
+  border: 1px solid var(--primary-8);
+  cursor: default !important;
+}
+
+.start-header-icon {
+  width: 40px !important;
+  height: 40px !important;
+  aspect-ratio: 1/1;
+  border-radius: 148px;
+  font-size: 20px;
+}

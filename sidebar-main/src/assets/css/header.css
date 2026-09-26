@@ -1,0 +1,84 @@
+.pnd-header {
+    height: 68px !important;
+    top:0;
+    left:0;
+    right:0;
+    position:fixed;
+    z-index: 17;
+    padding: 12px;
+    background-color: var(--surface-100);
+}
+
+.logo-item {
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 50%;
+    padding: 12px;
+    justify-content: center;
+    border: 1px solid var(--white-100);
+    background: radial-gradient(99.75% 50% at 50% 100%, var(--white-100) 0%, var(--white-0) 100%); /* Variable names changed to lowercase */
+    box-shadow: 0px 0px 24px 0px var(--primary-6);
+    margin-left: 12px;
+    margin-bottom: 12px;
+}
+
+.logo-icon {
+    font-size: 20px;
+    text-align: center;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    will-change: contents;
+    transition: color 0.15s ease-in-out;
+    color: var(--primary-100);
+    cursor: pointer;
+}
+
+.nav-bar {
+    display: flex; 
+    justify-content: flex-start;
+    align-items: stretch;
+    position: fixed;
+    top: 12px;
+    right: 248px; 
+    transition: all 0.3s ease-in-out, background-color 0.3s ease-in-out;
+    width: calc(100% - 316px);
+    @media only screen and (max-width: 768px) {
+        width: calc(100dvw - 260px);
+    }
+}
+
+.nav-bar.collapsed  {
+    right: 68px;
+    width: calc(100dvw - 136px);
+    @media only screen and (max-width: 768px) {
+        width: calc(100dvw - 68px - 12px);
+    }
+}
+
+.menu {
+    transition: transform 0.3s ease-in-out;
+    transform: rotate(0deg);
+}
+
+.pnd-header .nav-bar li {
+  list-style: none !important;
+}
+.pnd-header .nav-bar li a.dropdown-toggle {
+  /* به جای removeClass → force override */
+  pointer-events: none;
+}
+.pnd-header .nav-bar #notif-list-pjax {
+  margin: 0 !important;
+}
+
+#search-btn {
+    @media only screen and (max-width: 768px){
+        display: none;
+    }
+}
+
+

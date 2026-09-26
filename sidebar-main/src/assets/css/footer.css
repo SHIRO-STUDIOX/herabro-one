@@ -1,0 +1,30 @@
+.pnd-footer {
+  position: fixed;
+  bottom: 12px;
+  right: 272px;
+  left: 36px;
+  z-index: 20;
+  width: calc(100% - 308px);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: transparent;
+  justify-content: space-between;
+  padding: 16px;
+  transition: all 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+.pnd-footer.collapsed {
+  right: 92px;
+  width: calc(100% - 128px);
+}
+
+.pnd-footer-mobile {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px;
+  height: 68px;
+  z-index: 19;
+}

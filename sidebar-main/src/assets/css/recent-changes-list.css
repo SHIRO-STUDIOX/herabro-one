@@ -1,0 +1,232 @@
+.changelog-container {
+  flex: 1;
+  overflow-y: auto;
+  padding: 20px 20px 40px 20px;
+  position: relative;
+  width: 100%;
+}
+
+.changelog-content {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  position: relative;
+  width: 100%;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+  direction: rtl;
+}
+
+.changelog-items {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+  z-index: 2;
+  position: relative;
+}
+
+.changelog-item {
+  display: flex;
+  gap: 16px;
+  align-items: start;
+  justify-content: flex-end;
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.changelog-thumbnail {
+  border: 1px solid var(--primary-12);
+  border-radius: 12px;
+  width: 120px;
+  height: 120px;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.changelog-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.changelog-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+  padding: 4px 0;
+  text-align: right;
+  max-height: 120px;
+}
+
+.changelog-header {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.changelog-badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 0 6px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 16px;
+  backdrop-filter: blur(8px);
+}
+
+.changelog-date {
+  display: block;
+  flex-grow: 1;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.changelog-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.changelog-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary-100);
+  margin: 0;
+  line-height: 22px;
+  text-align: right;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.changelog-desc {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--primary-60);
+  line-height: 18px;
+  margin: 0;
+  text-align: justify;
+  text-justify: inter-word;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.changelog-dot {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  right: -15px;
+  top: 9px;
+  z-index: 3;
+}
+
+.changelog-timeline {
+  padding-top: 12px;
+  width: 1px;
+  z-index: 1;
+}
+
+.changelog-timeline-bar {
+  background-color: var(--primary-12);
+  width: 1px;
+  height: calc(100% - 108px);
+}
+
+/* Success style overrides */
+.type-success .changelog-badge {
+  background-color: var(--success-8);
+  color: var(--success-100);
+}
+.type-success .changelog-date {
+  color: var(--success-100);
+}
+.type-success .changelog-dot {
+  background-color: var(--success-100);
+}
+
+/* Secondary style overrides */
+.type-secondary .changelog-badge {
+  background-color: var(--secondary-8);
+  color: var(--secondary-100);
+}
+.type-secondary .changelog-date {
+  color: var(--secondary-100);
+}
+.type-secondary .changelog-dot {
+  background-color: var(--secondary-100);
+}
+
+/* Warning style overrides */
+.type-warning .changelog-badge {
+  background-color: var(--warning-8);
+  color: var(--warning-100);
+}
+.type-warning .changelog-date {
+  color: var(--warning-100);
+}
+.type-warning .changelog-dot {
+  background-color: var(--warning-100);
+}
+
+/* Error style overrides */
+.type-error .changelog-badge {
+  background-color: var(--error-8);
+  color: var(--error-100);
+}
+.type-error .changelog-date {
+  color: var(--error-100);
+}
+.type-error .changelog-dot {
+  background-color: var(--error-100);
+}
+
+/* Info style overrides */
+.type-info .changelog-badge {
+  background-color: var(--info-8);
+  color: var(--info-100);
+}
+.type-info .changelog-date {
+  color: var(--info-100);
+}
+.type-info .changelog-dot {
+  background-color: var(--info-100);
+}
+
+.list-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  view-transition-name: widget-content;
+}
+
+.changelog-reached-end {
+  text-align: center;
+  color: var(--primary-40);
+  font-size: 12px;
+  padding: 12px 0 0 6px;
+  font-weight: 500;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  direction: rtl;
+  position: relative;
+}

@@ -1,0 +1,528 @@
+/* primary */
+.text-primary-100 {
+  color: var(--primary-100) !important;
+}
+.bg-primary-100 {
+  background-color: var(--primary-100) !important ;
+}
+.text-primary-80 {
+  color: var(--primary-80) !important ;
+}
+.bg-primary-80 {
+  background-color: var(--primary-80) !important ;
+}
+.text-primary-60 {
+  color: var(--primary-60) !important ;
+}
+.bg-primary-60 {
+  background-color: var(--primary-60) !important ;
+}
+.text-primary-40 {
+  color: var(--primary-40) !important ;
+}
+.bg-primary-40 {
+  background-color: var(--primary-40) !important ;
+}
+.text-primary-32 {
+  color: var(--primary-32) !important ;
+}
+.bg-primary-32 {
+  background-color: var(--primary-32) !important ;
+}
+.text-primary-24 {
+  color: var(--primary-24) !important ;
+}
+.bg-primary-24 {
+  background-color: var(--primary-24) !important ;
+}
+.text-primary-12 {
+  color: var(--primary-12) !important ;
+}
+.bg-primary-12 {
+  background-color: var(--primary-12) !important ;
+}
+.text-primary-8 {
+  color: var(--primary-8) !important ;
+}
+.bg-primary-8 {
+  background-color: var(--primary-8) !important ;
+}
+.text-primary-6 {
+  color: var(--primary-6) !important ;
+}
+.bg-primary-6 {
+  background-color: var(--primary-6) !important ;
+}
+.text-primary-2 {
+  color: var(--primary-2) !important ;
+}
+.bg-primary-2 {
+  background-color: var(--primary-2) !important ;
+}
+.text-primary-1 {
+  color: var(--primary-1) !important ;
+}
+.bg-primary-1 {
+  background-color: var(--primary-1) !important ;
+}
+.text-primary-0 {
+  color: var(--primary-0) !important ;
+}
+.bg-primary-0 {
+  background-color: var(--primary-0) !important ;
+}
+
+/* light-white */
+.text-white-100 {
+  color: var(--white-100) !important ;
+}
+.bg-white-100 {
+  background-color: var(--white-100) !important ;
+}
+.text-white-80 {
+  color: var(--white-80) !important ;
+}
+.bg-white-80 {
+  background-color: var(--white-80) !important ;
+}
+.text-white-60 {
+  color: var(--white-60) !important ;
+}
+.bg-white-60 {
+  background-color: var(--white-60) !important ;
+}
+.text-white-40 {
+  color: var(--white-40) !important ;
+}
+.bg-white-40 {
+  background-color: var(--white-40) !important ;
+}
+.text-white-32 {
+  color: var(--white-32) !important ;
+}
+.bg-white-32 {
+  background-color: var(--white-32) !important ;
+}
+.text-white-24 {
+  color: var(--white-24) !important ;
+}
+.bg-white-24 {
+  background-color: var(--white-24) !important ;
+}
+.text-white-12 {
+  color: var(--white-12) !important ;
+}
+.bg-white-12 {
+  background-color: var(--white-12) !important ;
+}
+.text-white-8 {
+  color: var(--white-8) !important ;
+}
+.bg-white-8 {
+  background-color: var(--white-8) !important ;
+}
+.text-white-6 {
+  color: var(--white-6) !important ;
+}
+.bg-white-6 {
+  background-color: var(--white-6) !important ;
+}
+.text-white-2 {
+  color: var(--white-2) !important ;
+}
+.bg-white-2 {
+  background-color: var(--white-2) !important ;
+}
+.text-white-1 {
+  color: var(--white-1) !important ;
+}
+.bg-white-1 {
+  background-color: var(--white-1) !important ;
+}
+.text-white-0 {
+  color: var(--white-0) !important ;
+}
+.bg-white-0 {
+  background-color: var(--white-0) !important ;
+}
+
+/* secondary */
+.text-secondary-100 {
+  color: var(--secondary-100) !important ;
+}
+.bg-secondary-100 {
+  background-color: var(--secondary-100) !important ;
+}
+.text-secondary-80 {
+  color: var(--secondary-80) !important ;
+}
+.bg-secondary-80 {
+  background-color: var(--secondary-80) !important ;
+}
+.text-secondary-60 {
+  color: var(--secondary-60) !important ;
+}
+.bg-secondary-60 {
+  background-color: var(--secondary-60) !important ;
+}
+.text-secondary-40 {
+  color: var(--secondary-40) !important ;
+}
+.bg-secondary-40 {
+  background-color: var(--secondary-40) !important ;
+}
+.text-secondary-32 {
+  color: var(--secondary-32) !important ;
+}
+.bg-secondary-32 {
+  background-color: var(--secondary-32) !important ;
+}
+.text-secondary-24 {
+  color: var(--secondary-24) !important ;
+}
+.bg-secondary-24 {
+  background-color: var(--secondary-24) !important ;
+}
+.text-secondary-12 {
+  color: var(--secondary-12) !important ;
+}
+.bg-secondary-12 {
+  background-color: var(--secondary-12) !important ;
+}
+.text-secondary-8 {
+  color: var(--secondary-8) !important ;
+}
+.bg-secondary-8 {
+  background-color: var(--secondary-8) !important ;
+}
+.text-secondary-6 {
+  color: var(--secondary-6) !important ;
+}
+.bg-secondary-6 {
+  background-color: var(--secondary-6) !important ;
+}
+.text-secondary-2 {
+  color: var(--secondary-2) !important ;
+}
+.bg-secondary-2 {
+  background-color: var(--secondary-2) !important ;
+}
+.text-secondary-1 {
+  color: var(--secondary-1) !important ;
+}
+.bg-secondary-1 {
+  background-color: var(--secondary-1) !important ;
+}
+.text-secondary-0 {
+  color: var(--secondary-0) !important ;
+}
+.bg-secondary-0 {
+  background-color: var(--secondary-0) !important ;
+}
+
+/* error */
+.text-error-100 {
+  color: var(--error-100) !important ;
+}
+.bg-error-100 {
+  background-color: var(--error-100) !important ;
+}
+.text-error-80 {
+  color: var(--error-80) !important ;
+}
+.bg-error-80 {
+  background-color: var(--error-80) !important ;
+}
+.text-error-60 {
+  color: var(--error-60) !important ;
+}
+.bg-error-60 {
+  background-color: var(--error-60) !important ;
+}
+.text-error-40 {
+  color: var(--error-40) !important ;
+}
+.bg-error-40 {
+  background-color: var(--error-40) !important ;
+}
+.text-error-32 {
+  color: var(--error-32) !important ;
+}
+.bg-error-32 {
+  background-color: var(--error-32) !important ;
+}
+.text-error-24 {
+  color: var(--error-24) !important ;
+}
+.bg-error-24 {
+  background-color: var(--error-24) !important ;
+}
+.text-error-12 {
+  color: var(--error-12) !important ;
+}
+.bg-error-12 {
+  background-color: var(--error-12) !important ;
+}
+.text-error-8 {
+  color: var(--error-8) !important ;
+}
+.bg-error-8 {
+  background-color: var(--error-8) !important ;
+}
+.text-error-6 {
+  color: var(--error-6) !important ;
+}
+.bg-error-6 {
+  background-color: var(--error-6) !important ;
+}
+.text-error-2 {
+  color: var(--error-2) !important ;
+}
+.bg-error-2 {
+  background-color: var(--error-2) !important ;
+}
+.text-error-1 {
+  color: var(--error-1) !important ;
+}
+.bg-error-1 {
+  background-color: var(--error-1) !important ;
+}
+.text-error-0 {
+  color: var(--error-0) !important ;
+}
+.bg-error-0 {
+  background-color: var(--error-0) !important ;
+}
+
+/* background */
+.text-background-100 {
+  color: var(--surface-100) !important ;
+}
+.bg-background-100 {
+  background-color: var(--surface-100) !important ;
+}
+.text-background-0 {
+  color: var(--surface-0) !important ;
+}
+.bg-background-0 {
+  background-color: var(--surface-0) !important ;
+}
+
+.text-accent-100 {
+  color: var(--accent-100) !important;
+}
+.bg-accent-100 {
+  background-color: var(--accent-100) !important ;
+}
+.text-accent-80 {
+  color: var(--accent-80) !important ;
+}
+.bg-accent-80 {
+  background-color: var(--accent-80) !important ;
+}
+.text-accent-60 {
+  color: var(--accent-60) !important ;
+}
+.bg-accent-60 {
+  background-color: var(--accent-60) !important ;
+}
+.text-accent-40 {
+  color: var(--accent-40) !important ;
+}
+.bg-accent-40 {
+  background-color: var(--accent-40) !important ;
+}
+.text-accent-32 {
+  color: var(--accent-32) !important ;
+}
+.bg-accent-32 {
+  background-color: var(--accent-32) !important ;
+}
+.text-accent-24 {
+  color: var(--accent-24) !important ;
+}
+.bg-accent-24 {
+  background-color: var(--accent-24) !important ;
+}
+.text-accent-12 {
+  color: var(--accent-12) !important ;
+}
+.bg-accent-12 {
+  background-color: var(--accent-12) !important ;
+}
+.text-accent-8 {
+  color: var(--accent-8) !important ;
+}
+.bg-accent-8 {
+  background-color: var(--accent-8) !important ;
+}
+.text-accent-6 {
+  color: var(--accent-6) !important ;
+}
+.bg-accent-6 {
+  background-color: var(--accent-6) !important ;
+}
+.text-accent-2 {
+  color: var(--accent-2) !important ;
+}
+.bg-accent-2 {
+  background-color: var(--accent-2) !important ;
+}
+.text-accent-1 {
+  color: var(--accent-1) !important ;
+}
+.bg-accent-1 {
+  background-color: var(--accent-1) !important ;
+}
+.text-accent-0 {
+  color: var(--accent-0) !important ;
+}
+.bg-accent-0 {
+  background-color: var(--accent-0) !important ;
+}
+
+.text-success-100 {
+  color: var(--success-100) !important;
+}
+.bg-success-100 {
+  background-color: var(--success-100) !important ;
+}
+.text-success-80 {
+  color: var(--success-80) !important ;
+}
+.bg-success-80 {
+  background-color: var(--success-80) !important ;
+}
+.text-success-60 {
+  color: var(--success-60) !important ;
+}
+.bg-success-60 {
+  background-color: var(--success-60) !important ;
+}
+.text-success-40 {
+  color: var(--success-40) !important ;
+}
+.bg-success-40 {
+  background-color: var(--success-40) !important ;
+}
+.text-success-32 {
+  color: var(--success-32) !important ;
+}
+.bg-success-32 {
+  background-color: var(--success-32) !important ;
+}
+.text-success-24 {
+  color: var(--success-24) !important ;
+}
+.bg-success-24 {
+  background-color: var(--success-24) !important ;
+}
+.text-success-12 {
+  color: var(--success-12) !important ;
+}
+.bg-success-12 {
+  background-color: var(--success-12) !important ;
+}
+.text-success-8 {
+  color: var(--success-8) !important ;
+}
+.bg-success-8 {
+  background-color: var(--success-8) !important ;
+}
+.text-success-6 {
+  color: var(--success-6) !important ;
+}
+.bg-success-6 {
+  background-color: var(--success-6) !important ;
+}
+.text-success-2 {
+  color: var(--success-2) !important ;
+}
+.bg-success-2 {
+  background-color: var(--success-2) !important ;
+}
+.text-success-1 {
+  color: var(--success-1) !important ;
+}
+.bg-success-1 {
+  background-color: var(--success-1) !important ;
+}
+.text-success-0 {
+  color: var(--success-0) !important ;
+}
+.bg-success-0 {
+  background-color: var(--success-0) !important ;
+}
+
+.text-info-100 {
+  color: var(--info-100) !important;
+}
+.bg-info-100 {
+  background-color: var(--info-100) !important ;
+}
+.text-info-80 {
+  color: var(--info-80) !important ;
+}
+.bg-info-80 {
+  background-color: var(--info-80) !important ;
+}
+.text-info-60 {
+  color: var(--info-60) !important ;
+}
+.bg-info-60 {
+  background-color: var(--info-60) !important ;
+}
+.text-info-40 {
+  color: var(--info-40) !important ;
+}
+.bg-info-40 {
+  background-color: var(--info-40) !important ;
+}
+.text-info-32 {
+  color: var(--info-32) !important ;
+}
+.bg-info-32 {
+  background-color: var(--info-32) !important ;
+}
+.text-info-24 {
+  color: var(--info-24) !important ;
+}
+.bg-info-24 {
+  background-color: var(--info-24) !important ;
+}
+.text-info-12 {
+  color: var(--info-12) !important ;
+}
+.bg-info-12 {
+  background-color: var(--info-12) !important ;
+}
+.text-info-8 {
+  color: var(--info-8) !important ;
+}
+.bg-info-8 {
+  background-color: var(--info-8) !important ;
+}
+.text-info-6 {
+  color: var(--info-6) !important ;
+}
+.bg-info-6 {
+  background-color: var(--info-6) !important ;
+}
+.text-info-2 {
+  color: var(--info-2) !important ;
+}
+.bg-info-2 {
+  background-color: var(--info-2) !important ;
+}
+.text-info-1 {
+  color: var(--info-1) !important ;
+}
+.bg-info-1 {
+  background-color: var(--info-1) !important ;
+}
+.text-info-0 {
+  color: var(--info-0) !important ;
+}
+.bg-info-0 {
+  background-color: var(--info-0) !important ;
+}

@@ -1,0 +1,57 @@
+#global-search-modal {
+  position: fixed;
+  flex-direction: column !important;
+  will-change: auto;
+  z-index: 30;
+  display: flex !important;
+  gap: 6px;
+  border-radius: 16px;
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1.5);
+  @media only screen and (min-width: 768px) {
+    top: 240px;
+    width: 600px !important;
+    left: calc(50% - 300px);
+  }
+
+  @media only screen and (max-width: 768px){
+    bottom: 68px;
+    width: calc(100% - 24px);
+    left: 12px;
+    right: 12px;
+  }
+}
+
+#global-search-modal.lg {
+  @media only screen and (min-width: 768px) {
+    width: 760px !important;
+    left: calc(50% - 380px);
+  }
+}
+
+#global-search-modal.xl {
+  @media only screen and (min-width: 768px) {
+    width: 1024px !important;
+    left: calc(50% - 512px);
+  }
+}
+
+
+#global-search-modal input::placeholder {
+  color: var(--primary-40);
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: IRANYekanXVF !important;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+#global-search-modal input::-ms-input-placeholder {
+  color: var(--primary-40);
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: IRANYekanXVF !important;
+  font-size: 18px;
+  font-weight: 500;
+}

@@ -1,0 +1,9 @@
+.idea/
+.vscode/
+vendor/
+node_modules/
+
+.env
+composer.lock
+pnpm-lock.yaml
+

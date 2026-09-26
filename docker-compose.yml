@@ -1,0 +1,90 @@
+services:
+  # ── PostgreSQL ──
+  db:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    env_file: ./hesabro-one-backend-django/.env
+    environment:
+      POSTGRES_DB: hesabro
+      POSTGRES_USER: hesabro
+      POSTGRES_PASSWORD: hesabro
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U hesabro -d hesabro"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ── Redis ──
+  redis:
+    image: redis:7-alpine
+    restart: unless-stopped
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+  # ── pgAdmin ──
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    restart: unless-stopped
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@hesabro.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_LISTEN_PORT: 80
+    ports:
+      - "${PGADMIN_PORT:-5050-5060}:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      db:
+        condition: service_healthy
+
+  # ── Django Backend ──
+  backend:
+    build:
+      context: ./hesabro-one-backend-django
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    env_file: ./hesabro-one-backend-django/.env
+    volumes:
+      - static_files:/app/staticfiles
+      - media_files:/app/media
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  # ── Vue Frontend ──
+  frontend:
+    build:
+      context: ./hesabro-one-frontend-vue
+      dockerfile: Dockerfile
+    restart: unless-stopped
+
+  # ── Nginx Reverse Proxy ──
+  nginx:
+    build:
+      context: ./hesabro-one-backend-django/docker/nginx
+      dockerfile: Dockerfile
+    restart: unless-stopped
+    ports:
+      - "${NGINX_PORT:-80}:80"
+    volumes:
+      - static_files:/app/staticfiles:ro
+      - media_files:/app/media:ro
+    depends_on:
+      - backend
+      - frontend
+
+volumes:
+  postgres_data:
+  redis_data:
+  static_files:
+  media_files:
+  pgadmin_data:

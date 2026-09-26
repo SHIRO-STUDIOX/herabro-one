@@ -1,0 +1,22 @@
+# Nested Git repositories (tracked independently)
+hesabro-one-backend-django/
+hesabro-one-frontend-vue/
+panel/
+
+# Dependencies & Environments
+node_modules/
+.venv/
+.venv-local/
+
+# Local databases & secrets
+*.sqlite3
+*.db
+.env
+.dev-local.pids.json
+backup-config.json
+
+# Build and temporary files
+tsc-out.txt
+.freebuff/
+.treasury_stash/
+.agents/

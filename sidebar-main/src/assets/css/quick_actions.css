@@ -1,0 +1,78 @@
+#quick-action-container {
+  @media only screen and (min-width: 768px) {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    z-index: 19;
+    margin-bottom: 24px;
+    transform: translateX(-50%);
+  }
+}
+
+#quick-action-button {
+  display: flex;
+  height: 44px;
+  aspect-ratio: 1 / 1;
+  justify-content: center;
+  align-items: center;
+  border-radius: 24px;
+  border: 1px solid var(--secondary-100);
+  background: var(--secondary-100);
+  box-shadow: 0 0 24px 0 var(--secondary-24);
+  font-size: 20px;
+  position: relative;
+  color: var(--white-100);
+  transition: all 0.3s ease;
+}
+
+#quick-action-button:hover {
+  cursor: pointer;
+}
+
+#quick-action-button.active {
+  @media only screen and (min-width: 768px) {
+    transform: rotate(180deg);
+  }
+}
+
+#quick-action-card-body {
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+#quick-action-card > div {
+  border-radius: 20px;
+}
+
+#quick-action-card {
+  max-height: 320px;
+  min-height: 192px;
+  bottom: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-bottom: 12px;
+  position: absolute;
+  z-index: 19;
+  border-radius: 20px;
+  border: 1px solid var(--primary-8);
+  background: var(--white-100);
+  box-shadow: 0 4px 24px 0 var(--primary-6);
+  display: flex;
+  left: 50%;
+  transform: translateX(-50%) translateY(0);
+  transition: all 0.3s ease-in-out;
+
+  @media only screen and (max-width: 768px) {
+    margin-bottom: 0px;
+    position: fixed;
+    bottom: 68px;
+    left: 12px;
+    right: 12px;
+    transform: none;
+    max-width: calc(100% - 24px);
+  }
+  @media only screen and (min-width: 768px) {
+    width: 440px;
+  }
+}
