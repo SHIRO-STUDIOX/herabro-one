@@ -1,7 +1,7 @@
 # Nested Git repositories (tracked independently)
 hesabro-one-backend-django/
 hesabro-one-frontend-vue/
-panel/
+#panel/
 
 # Dependencies & Environments
 node_modules/
@@ -11,12 +11,12 @@ node_modules/
 # Local databases & secrets
 *.sqlite3
 *.db
-.env
+#.env
 .dev-local.pids.json
 backup-config.json
 
 # Build and temporary files
 tsc-out.txt
-.freebuff/
-.treasury_stash/
-.agents/
+#.freebuff/
+#.treasury_stash/
+#.agents/

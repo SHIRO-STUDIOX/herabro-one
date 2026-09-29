@@ -1,0 +1,57 @@
+/* =========================================
+   معرفی فونت متغیر (Variable Font)
+   ========================================= */
+@font-face {
+  font-family: IRANYekanXVF;
+  src: url('../../fonts/IRANYekanXVFaNumVF.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* اعمال فونت پیش‌فرض به کل سیستم */
+  --font-sans: IRANYekanXVF, system-ui, sans-serif;
+  --font-mono: IRANYekanXVF, ui-monospace, monospace;
+
+  /* سایزهای دیزاین سیستم Pandora360 */
+  --text-3xs: 9px;
+  --text-2xs: 10px;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 32px;
+}
+
+@theme {
+  /* اعمال فونت پیش‌فرض به کل سیستم */
+  --font-sans: IRANYekanXVF, system-ui, sans-serif;
+  --font-mono: IRANYekanXVF, ui-monospace, monospace;
+
+  /* سایزهای دیزاین سیستم Pandora360 */
+  --text-3xs: 9px;
+  --text-2xs: 10px;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 24px;
+  --text-3xl: 32px;
+}
+
+/* =========================================
+   کلاس‌های تنظیم نقطه فونت متغیر (Tailwind v4 Utilities)
+   ========================================= */
+@utility font-dots-0 {
+  font-variation-settings: 'dots' 0;
+}
+@utility font-dots-1 {
+  font-variation-settings: 'dots' 1;
+}
+@utility font-dots-2 {
+  font-variation-settings: 'dots' 2;
+}

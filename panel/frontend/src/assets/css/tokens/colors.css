@@ -1,0 +1,394 @@
+:root {
+  /* Primary (Pandora360 Default) */
+  --color-primary-0: rgba(73, 64, 109, 0);
+  --color-primary-1: rgba(73, 64, 109, 0.01);
+  --color-primary-6: rgba(73, 64, 109, 0.06);
+  --color-primary-8: rgba(73, 64, 109, 0.08);
+  --color-primary-12: rgba(73, 64, 109, 0.12);
+  --color-primary-24: rgba(73, 64, 109, 0.24);
+  --color-primary-32: rgba(73, 64, 109, 0.32);
+  --color-primary-40: rgba(73, 64, 109, 0.4);
+  --color-primary-60: rgba(73, 64, 109, 0.6);
+  --color-primary-80: rgba(73, 64, 109, 0.8);
+  --color-primary-100: #49406d;
+
+  /* Secondary */
+  --color-secondary-0: rgba(184, 66, 121, 0);
+  --color-secondary-1: rgba(184, 66, 121, 0.01);
+  --color-secondary-6: rgba(184, 66, 121, 0.06);
+  --color-secondary-8: rgba(184, 66, 121, 0.08);
+  --color-secondary-12: rgba(184, 66, 121, 0.12);
+  --color-secondary-24: rgba(184, 66, 121, 0.24);
+  --color-secondary-32: rgba(184, 66, 121, 0.32);
+  --color-secondary-40: rgba(184, 66, 121, 0.4);
+  --color-secondary-60: rgba(184, 66, 121, 0.6);
+  --color-secondary-80: rgba(184, 66, 121, 0.8);
+  --color-secondary-100: #b84279;
+
+  /* Accent */
+  --color-accent-0: rgba(24, 109, 122, 0);
+  --color-accent-1: rgba(24, 109, 122, 0.01);
+  --color-accent-6: rgba(24, 109, 122, 0.06);
+  --color-accent-8: rgba(24, 109, 122, 0.08);
+  --color-accent-12: rgba(24, 109, 122, 0.12);
+  --color-accent-24: rgba(24, 109, 122, 0.24);
+  --color-accent-32: rgba(24, 109, 122, 0.32);
+  --color-accent-40: rgba(24, 109, 122, 0.4);
+  --color-accent-60: rgba(24, 109, 122, 0.6);
+  --color-accent-80: rgba(24, 109, 122, 0.8);
+  --color-accent-100: #186d7a;
+
+  /* Info */
+  --color-info-0: rgba(37, 144, 184, 0);
+  --color-info-1: rgba(37, 144, 184, 0.01);
+  --color-info-6: rgba(37, 144, 184, 0.06);
+  --color-info-8: rgba(37, 144, 184, 0.08);
+  --color-info-12: rgba(37, 144, 184, 0.12);
+  --color-info-24: rgba(37, 144, 184, 0.24);
+  --color-info-32: rgba(37, 144, 184, 0.32);
+  --color-info-40: rgba(37, 144, 184, 0.4);
+  --color-info-60: rgba(37, 144, 184, 0.6);
+  --color-info-80: rgba(37, 144, 184, 0.8);
+  --color-info-100: #2590b8;
+
+  /* Success */
+  --color-success-0: rgba(65, 163, 117, 0);
+  --color-success-1: rgba(65, 163, 117, 0.01);
+  --color-success-6: rgba(65, 163, 117, 0.06);
+  --color-success-8: rgba(65, 163, 117, 0.08);
+  --color-success-12: rgba(65, 163, 117, 0.12);
+  --color-success-24: rgba(65, 163, 117, 0.24);
+  --color-success-32: rgba(65, 163, 117, 0.32);
+  --color-success-40: rgba(65, 163, 117, 0.4);
+  --color-success-60: rgba(65, 163, 117, 0.6);
+  --color-success-80: rgba(65, 163, 117, 0.8);
+  --color-success-100: #41a375;
+
+  /* Warning */
+  --color-warning-0: rgba(184, 140, 73, 0);
+  --color-warning-1: rgba(184, 140, 73, 0.01);
+  --color-warning-6: rgba(184, 140, 73, 0.06);
+  --color-warning-8: rgba(184, 140, 73, 0.08);
+  --color-warning-12: rgba(184, 140, 73, 0.12);
+  --color-warning-24: rgba(184, 140, 73, 0.24);
+  --color-warning-32: rgba(184, 140, 73, 0.32);
+  --color-warning-40: rgba(184, 140, 73, 0.4);
+  --color-warning-60: rgba(184, 140, 73, 0.6);
+  --color-warning-80: rgba(184, 140, 73, 0.8);
+  --color-warning-100: #b88c49;
+
+  /* Error */
+  --color-error-0: rgba(184, 66, 66, 0);
+  --color-error-1: rgba(184, 66, 66, 0.01);
+  --color-error-6: rgba(184, 66, 66, 0.06);
+  --color-error-8: rgba(184, 66, 66, 0.08);
+  --color-error-12: rgba(184, 66, 66, 0.12);
+  --color-error-24: rgba(184, 66, 66, 0.24);
+  --color-error-32: rgba(184, 66, 66, 0.32);
+  --color-error-40: rgba(184, 66, 66, 0.4);
+  --color-error-60: rgba(184, 66, 66, 0.6);
+  --color-error-80: rgba(184, 66, 66, 0.8);
+  --color-error-100: #b84242;
+
+  /* Black */
+  --color-black-0: rgba(40, 40, 40, 0);
+  --color-black-1: rgba(40, 40, 40, 0.01);
+  --color-black-6: rgba(40, 40, 40, 0.06);
+  --color-black-8: rgba(40, 40, 40, 0.08);
+  --color-black-12: rgba(40, 40, 40, 0.12);
+  --color-black-24: rgba(40, 40, 40, 0.24);
+  --color-black-32: rgba(40, 40, 40, 0.32);
+  --color-black-40: rgba(40, 40, 40, 0.4);
+  --color-black-60: rgba(40, 40, 40, 0.6);
+  --color-black-80: rgba(40, 40, 40, 0.8);
+  --color-black-100: #282828;
+
+  /* White */
+  --color-white-0: rgba(255, 255, 255, 0);
+  --color-white-1: rgba(255, 255, 255, 0.06);
+  --color-white-6: rgba(255, 255, 255, 0.06);
+  --color-white-8: rgba(255, 255, 255, 0.08);
+  --color-white-12: rgba(255, 255, 255, 0.12);
+  --color-white-24: rgba(255, 255, 255, 0.24);
+  --color-white-32: rgba(255, 255, 255, 0.32);
+  --color-white-40: rgba(255, 255, 255, 0.4);
+  --color-white-60: rgba(255, 255, 255, 0.6);
+  --color-white-80: rgba(255, 255, 255, 0.8);
+  --color-white-100: #ffffff;
+
+  /* Surface (Default Pandora360) */
+  --color-surface-0: rgba(243, 240, 255, 0);
+  --color-surface-100: #f3f0ff;
+
+  /* =========================================
+     Hesabro Specific Color Palette (hesabro.tokens.json)
+     ========================================= */
+  --color-hesabro-primary-0: rgba(45, 66, 76, 0);
+  --color-hesabro-primary-1: rgba(45, 66, 76, 0.01);
+  --color-hesabro-primary-6: rgba(45, 66, 76, 0.06);
+  --color-hesabro-primary-8: rgba(45, 66, 76, 0.08);
+  --color-hesabro-primary-12: rgba(45, 66, 76, 0.12);
+  --color-hesabro-primary-24: rgba(45, 66, 76, 0.24);
+  --color-hesabro-primary-32: rgba(45, 66, 76, 0.32);
+  --color-hesabro-primary-40: rgba(45, 66, 76, 0.4);
+  --color-hesabro-primary-60: rgba(45, 66, 76, 0.6);
+  --color-hesabro-primary-80: rgba(45, 66, 76, 0.8);
+  --color-hesabro-primary-100: #2d424c;
+
+  --color-hesabro-secondary-0: rgba(40, 125, 157, 0);
+  --color-hesabro-secondary-1: rgba(40, 125, 157, 0.01);
+  --color-hesabro-secondary-6: rgba(40, 125, 157, 0.06);
+  --color-hesabro-secondary-8: rgba(40, 125, 157, 0.08);
+  --color-hesabro-secondary-12: rgba(40, 125, 157, 0.12);
+  --color-hesabro-secondary-24: rgba(40, 125, 157, 0.24);
+  --color-hesabro-secondary-32: rgba(40, 125, 157, 0.32);
+  --color-hesabro-secondary-40: rgba(40, 125, 157, 0.4);
+  --color-hesabro-secondary-60: rgba(40, 125, 157, 0.6);
+  --color-hesabro-secondary-80: rgba(40, 125, 157, 0.8);
+  --color-hesabro-secondary-100: #287d9d;
+
+  --color-hesabro-accent-0: rgba(104, 153, 117, 0);
+  --color-hesabro-accent-1: rgba(104, 153, 117, 0.01);
+  --color-hesabro-accent-6: rgba(104, 153, 117, 0.06);
+  --color-hesabro-accent-8: rgba(104, 153, 117, 0.08);
+  --color-hesabro-accent-12: rgba(104, 153, 117, 0.12);
+  --color-hesabro-accent-24: rgba(104, 153, 117, 0.24);
+  --color-hesabro-accent-32: rgba(104, 153, 117, 0.32);
+  --color-hesabro-accent-40: rgba(104, 153, 117, 0.4);
+  --color-hesabro-accent-60: rgba(104, 153, 117, 0.6);
+  --color-hesabro-accent-80: rgba(104, 153, 117, 0.8);
+  --color-hesabro-accent-100: #689975;
+
+  --color-hesabro-surface-0: rgba(218, 241, 248, 0);
+  --color-hesabro-surface-100: #daf1f8;
+
+  /* =========================================
+     Chart & Analytics Palette Tokens
+     ========================================= */
+  --color-chart-blue: #c4e8f5;
+  --color-chart-pink: #fac8df;
+  --color-chart-green: #deebc5;
+  --color-chart-purple: #d2d2fa;
+  --color-chart-yellow: #f5e1c4;
+  --color-chart-emerald: #ceebd8;
+  --color-chart-coral: #ebbcbc;
+  --color-chart-indigo: #c2bce0;
+  --color-chart-teal: #b4e0e0;
+}
+
+/* Hesabro Theme Override Mode */
+[data-theme='hesabro'],
+.theme-hesabro {
+  --color-primary-0: var(--color-hesabro-primary-0);
+  --color-primary-1: var(--color-hesabro-primary-1);
+  --color-primary-6: var(--color-hesabro-primary-6);
+  --color-primary-8: var(--color-hesabro-primary-8);
+  --color-primary-12: var(--color-hesabro-primary-12);
+  --color-primary-24: var(--color-hesabro-primary-24);
+  --color-primary-32: var(--color-hesabro-primary-32);
+  --color-primary-40: var(--color-hesabro-primary-40);
+  --color-primary-60: var(--color-hesabro-primary-60);
+  --color-primary-80: var(--color-hesabro-primary-80);
+  --color-primary-100: var(--color-hesabro-primary-100);
+
+  --color-secondary-0: var(--color-hesabro-secondary-0);
+  --color-secondary-1: var(--color-hesabro-secondary-1);
+  --color-secondary-6: var(--color-hesabro-secondary-6);
+  --color-secondary-8: var(--color-hesabro-secondary-8);
+  --color-secondary-12: var(--color-hesabro-secondary-12);
+  --color-secondary-24: var(--color-hesabro-secondary-24);
+  --color-secondary-32: var(--color-hesabro-secondary-32);
+  --color-secondary-40: var(--color-hesabro-secondary-40);
+  --color-secondary-60: var(--color-hesabro-secondary-60);
+  --color-secondary-80: var(--color-hesabro-secondary-80);
+  --color-secondary-100: var(--color-hesabro-secondary-100);
+
+  --color-accent-0: var(--color-hesabro-accent-0);
+  --color-accent-1: var(--color-hesabro-accent-1);
+  --color-accent-6: var(--color-hesabro-accent-6);
+  --color-accent-8: var(--color-hesabro-accent-8);
+  --color-accent-12: var(--color-hesabro-accent-12);
+  --color-accent-24: var(--color-hesabro-accent-24);
+  --color-accent-32: var(--color-hesabro-accent-32);
+  --color-accent-40: var(--color-hesabro-accent-40);
+  --color-accent-60: var(--color-hesabro-accent-60);
+  --color-accent-80: var(--color-hesabro-accent-80);
+  --color-accent-100: var(--color-hesabro-accent-100);
+
+  --color-surface-0: var(--color-hesabro-surface-0);
+  --color-surface-100: var(--color-hesabro-surface-100);
+}
+
+@theme {
+  /* Primary */
+  --color-primary-0: rgba(73, 64, 109, 0);
+  --color-primary-1: rgba(73, 64, 109, 0.01);
+  --color-primary-6: rgba(73, 64, 109, 0.06);
+  --color-primary-8: rgba(73, 64, 109, 0.08);
+  --color-primary-12: rgba(73, 64, 109, 0.12);
+  --color-primary-24: rgba(73, 64, 109, 0.24);
+  --color-primary-32: rgba(73, 64, 109, 0.32);
+  --color-primary-40: rgba(73, 64, 109, 0.4);
+  --color-primary-60: rgba(73, 64, 109, 0.6);
+  --color-primary-80: rgba(73, 64, 109, 0.8);
+  --color-primary-100: #49406d;
+
+  /* Secondary */
+  --color-secondary-0: rgba(184, 66, 121, 0);
+  --color-secondary-1: rgba(184, 66, 121, 0.01);
+  --color-secondary-6: rgba(184, 66, 121, 0.06);
+  --color-secondary-8: rgba(184, 66, 121, 0.08);
+  --color-secondary-12: rgba(184, 66, 121, 0.12);
+  --color-secondary-24: rgba(184, 66, 121, 0.24);
+  --color-secondary-32: rgba(184, 66, 121, 0.32);
+  --color-secondary-40: rgba(184, 66, 121, 0.4);
+  --color-secondary-60: rgba(184, 66, 121, 0.6);
+  --color-secondary-80: rgba(184, 66, 121, 0.8);
+  --color-secondary-100: #b84279;
+
+  /* Accent */
+  --color-accent-0: rgba(24, 109, 122, 0);
+  --color-accent-1: rgba(24, 109, 122, 0.01);
+  --color-accent-6: rgba(24, 109, 122, 0.06);
+  --color-accent-8: rgba(24, 109, 122, 0.08);
+  --color-accent-12: rgba(24, 109, 122, 0.12);
+  --color-accent-24: rgba(24, 109, 122, 0.24);
+  --color-accent-32: rgba(24, 109, 122, 0.32);
+  --color-accent-40: rgba(24, 109, 122, 0.4);
+  --color-accent-60: rgba(24, 109, 122, 0.6);
+  --color-accent-80: rgba(24, 109, 122, 0.8);
+  --color-accent-100: #186d7a;
+
+  /* Info */
+  --color-info-0: rgba(37, 144, 184, 0);
+  --color-info-1: rgba(37, 144, 184, 0.01);
+  --color-info-6: rgba(37, 144, 184, 0.06);
+  --color-info-8: rgba(37, 144, 184, 0.08);
+  --color-info-12: rgba(37, 144, 184, 0.12);
+  --color-info-24: rgba(37, 144, 184, 0.24);
+  --color-info-32: rgba(37, 144, 184, 0.32);
+  --color-info-40: rgba(37, 144, 184, 0.4);
+  --color-info-60: rgba(37, 144, 184, 0.6);
+  --color-info-80: rgba(37, 144, 184, 0.8);
+  --color-info-100: #2590b8;
+
+  /* Success */
+  --color-success-0: rgba(65, 163, 117, 0);
+  --color-success-1: rgba(65, 163, 117, 0.01);
+  --color-success-6: rgba(65, 163, 117, 0.06);
+  --color-success-8: rgba(65, 163, 117, 0.08);
+  --color-success-12: rgba(65, 163, 117, 0.12);
+  --color-success-24: rgba(65, 163, 117, 0.24);
+  --color-success-32: rgba(65, 163, 117, 0.32);
+  --color-success-40: rgba(65, 163, 117, 0.4);
+  --color-success-60: rgba(65, 163, 117, 0.6);
+  --color-success-80: rgba(65, 163, 117, 0.8);
+  --color-success-100: #41a375;
+
+  /* Warning */
+  --color-warning-0: rgba(184, 140, 73, 0);
+  --color-warning-1: rgba(184, 140, 73, 0.01);
+  --color-warning-6: rgba(184, 140, 73, 0.06);
+  --color-warning-8: rgba(184, 140, 73, 0.08);
+  --color-warning-12: rgba(184, 140, 73, 0.12);
+  --color-warning-24: rgba(184, 140, 73, 0.24);
+  --color-warning-32: rgba(184, 140, 73, 0.32);
+  --color-warning-40: rgba(184, 140, 73, 0.4);
+  --color-warning-60: rgba(184, 140, 73, 0.6);
+  --color-warning-80: rgba(184, 140, 73, 0.8);
+  --color-warning-100: #b88c49;
+
+  /* Error */
+  --color-error-0: rgba(184, 66, 66, 0);
+  --color-error-1: rgba(184, 66, 66, 0.01);
+  --color-error-6: rgba(184, 66, 66, 0.06);
+  --color-error-8: rgba(184, 66, 66, 0.08);
+  --color-error-12: rgba(184, 66, 66, 0.12);
+  --color-error-24: rgba(184, 66, 66, 0.24);
+  --color-error-32: rgba(184, 66, 66, 0.32);
+  --color-error-40: rgba(184, 66, 66, 0.4);
+  --color-error-60: rgba(184, 66, 66, 0.6);
+  --color-error-80: rgba(184, 66, 66, 0.8);
+  --color-error-100: #b84242;
+
+  /* Black */
+  --color-black-0: rgba(40, 40, 40, 0);
+  --color-black-1: rgba(40, 40, 40, 0.01);
+  --color-black-6: rgba(40, 40, 40, 0.06);
+  --color-black-8: rgba(40, 40, 40, 0.08);
+  --color-black-12: rgba(40, 40, 40, 0.12);
+  --color-black-24: rgba(40, 40, 40, 0.24);
+  --color-black-32: rgba(40, 40, 40, 0.32);
+  --color-black-40: rgba(40, 40, 40, 0.4);
+  --color-black-60: rgba(40, 40, 40, 0.6);
+  --color-black-80: rgba(40, 40, 40, 0.8);
+  --color-black-100: #282828;
+
+  /* White */
+  --color-white-0: rgba(255, 255, 255, 0);
+  --color-white-1: rgba(255, 255, 255, 0.06);
+  --color-white-6: rgba(255, 255, 255, 0.06);
+  --color-white-8: rgba(255, 255, 255, 0.08);
+  --color-white-12: rgba(255, 255, 255, 0.12);
+  --color-white-24: rgba(255, 255, 255, 0.24);
+  --color-white-32: rgba(255, 255, 255, 0.32);
+  --color-white-40: rgba(255, 255, 255, 0.4);
+  --color-white-60: rgba(255, 255, 255, 0.6);
+  --color-white-80: rgba(255, 255, 255, 0.8);
+  --color-white-100: #ffffff;
+
+  /* Surface */
+  --color-surface-0: rgba(243, 240, 255, 0);
+  --color-surface-100: #f3f0ff;
+
+  /* Hesabro Theme Variables mapped to Tailwind v4 Theme Utility Engine */
+  --color-hesabro-primary-0: rgba(45, 66, 76, 0);
+  --color-hesabro-primary-1: rgba(45, 66, 76, 0.01);
+  --color-hesabro-primary-6: rgba(45, 66, 76, 0.06);
+  --color-hesabro-primary-8: rgba(45, 66, 76, 0.08);
+  --color-hesabro-primary-12: rgba(45, 66, 76, 0.12);
+  --color-hesabro-primary-24: rgba(45, 66, 76, 0.24);
+  --color-hesabro-primary-32: rgba(45, 66, 76, 0.32);
+  --color-hesabro-primary-40: rgba(45, 66, 76, 0.4);
+  --color-hesabro-primary-60: rgba(45, 66, 76, 0.6);
+  --color-hesabro-primary-80: rgba(45, 66, 76, 0.8);
+  --color-hesabro-primary-100: #2d424c;
+
+  --color-hesabro-secondary-0: rgba(40, 125, 157, 0);
+  --color-hesabro-secondary-1: rgba(40, 125, 157, 0.01);
+  --color-hesabro-secondary-6: rgba(40, 125, 157, 0.06);
+  --color-hesabro-secondary-8: rgba(40, 125, 157, 0.08);
+  --color-hesabro-secondary-12: rgba(40, 125, 157, 0.12);
+  --color-hesabro-secondary-24: rgba(40, 125, 157, 0.24);
+  --color-hesabro-secondary-32: rgba(40, 125, 157, 0.32);
+  --color-hesabro-secondary-40: rgba(40, 125, 157, 0.4);
+  --color-hesabro-secondary-60: rgba(40, 125, 157, 0.6);
+  --color-hesabro-secondary-80: rgba(40, 125, 157, 0.8);
+  --color-hesabro-secondary-100: #287d9d;
+
+  --color-hesabro-accent-0: rgba(104, 153, 117, 0);
+  --color-hesabro-accent-1: rgba(104, 153, 117, 0.01);
+  --color-hesabro-accent-6: rgba(104, 153, 117, 0.06);
+  --color-hesabro-accent-8: rgba(104, 153, 117, 0.08);
+  --color-hesabro-accent-12: rgba(104, 153, 117, 0.12);
+  --color-hesabro-accent-24: rgba(104, 153, 117, 0.24);
+  --color-hesabro-accent-32: rgba(104, 153, 117, 0.32);
+  --color-hesabro-accent-40: rgba(104, 153, 117, 0.4);
+  --color-hesabro-accent-60: rgba(104, 153, 117, 0.6);
+  --color-hesabro-accent-80: rgba(104, 153, 117, 0.8);
+  --color-hesabro-accent-100: #689975;
+
+  --color-hesabro-surface-0: rgba(218, 241, 248, 0);
+  --color-hesabro-surface-100: #daf1f8;
+
+  /* Chart & Analytics Palette */
+  --color-chart-blue: #c4e8f5;
+  --color-chart-pink: #fac8df;
+  --color-chart-green: #deebc5;
+  --color-chart-purple: #d2d2fa;
+  --color-chart-yellow: #f5e1c4;
+  --color-chart-emerald: #ceebd8;
+  --color-chart-coral: #ebbcbc;
+  --color-chart-indigo: #c2bce0;
+  --color-chart-teal: #b4e0e0;
+}

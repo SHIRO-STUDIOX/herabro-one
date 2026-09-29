@@ -1,0 +1,15 @@
+{
+  "name": "hesabro-admin-backoffice-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Hesabro Admin Backoffice Monorepo (Django Backend & Vue 3 Frontend)",
+  "workspaces": [
+    "frontend"
+  ],
+  "scripts": {
+    "dev:backend": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& ..\\hesabro-one-backend-django\\.venv-local\\Scripts\\python.exe backend/manage.py runserver 127.0.0.1:8001\"",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "build:frontend": "npm run build --prefix frontend",
+    "test:backend": "powershell -NoProfile -ExecutionPolicy Bypass -Command \"& ..\\hesabro-one-backend-django\\.venv-local\\Scripts\\python.exe backend/manage.py test tests\""
+  }
+}
