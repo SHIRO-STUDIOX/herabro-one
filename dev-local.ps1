@@ -92,6 +92,8 @@ if ($Stop) {
   if (Test-Path -LiteralPath $PidFile) {
     try {
       $pids = Get-Content -LiteralPath $PidFile -Raw | ConvertFrom-Json
+      if ($pids.backendPort) { $BackendPort = [int]$pids.backendPort }
+      if ($pids.frontendPort) { $FrontendPort = [int]$pids.frontendPort }
       foreach ($id in @($pids.backend, $pids.frontend)) {
         if ($id) { Stop-Process -Id $id -Force -ErrorAction SilentlyContinue; Write-Host "  killed PID $id" }
       }
@@ -129,6 +131,39 @@ try { & npm --version 2>&1 | Out-Null } catch { throw 'npm not found in PATH.' }
 Write-Host "  $pyVer | node $nodeVer"
 if (-not (Test-Path -LiteralPath $BackendDir))  { throw "Backend dir missing: $BackendDir" }
 if (-not (Test-Path -LiteralPath $FrontendDir)) { throw "Frontend dir missing: $FrontendDir" }
+
+function Test-PortAvailable([int]$port) {
+  try {
+    $listener = [System.Net.Sockets.TcpListener]::new([System.Net.IPAddress]::Loopback, $port)
+    $listener.Start()
+    $listener.Stop()
+    return $true
+  } catch {
+    return $false
+  }
+}
+
+function Find-AvailablePort([int]$startPort) {
+  $p = $startPort
+  while ($p -lt ($startPort + 100)) {
+    if (Test-PortAvailable $p) { return $p }
+    $p++
+  }
+  return $startPort
+}
+
+if (-not (Test-PortAvailable $BackendPort)) {
+  $altPort = Find-AvailablePort $BackendPort
+  Write-Warning "Port $BackendPort is not accessible (reserved by Windows/Hyper-V/WinNAT or in use)."
+  Write-Host "  Automatically switched BackendPort: $BackendPort -> $altPort" -ForegroundColor Yellow
+  $BackendPort = $altPort
+}
+if (-not (Test-PortAvailable $FrontendPort)) {
+  $altPort = Find-AvailablePort $FrontendPort
+  Write-Warning "Port $FrontendPort is not accessible or already in use."
+  Write-Host "  Automatically switched FrontendPort: $FrontendPort -> $altPort" -ForegroundColor Yellow
+  $FrontendPort = $altPort
+}
 
 # ── Local-only env (process scope, .env file untouched) ────
 # NOTE: django-environ gives OS env priority over the .env file,
@@ -274,7 +309,7 @@ New-Launcher $frontendLauncher @(
 $backendProc  = Start-Process powershell -ArgumentList "-NoExit -ExecutionPolicy Bypass -File `"$backendLauncher`"" -PassThru -WindowStyle Normal
 $frontendProc = Start-Process powershell -ArgumentList "-NoExit -ExecutionPolicy Bypass -File `"$frontendLauncher`"" -PassThru -WindowStyle Normal
 
-@{ backend = $backendProc.Id; frontend = $frontendProc.Id } | ConvertTo-Json | Set-Content -LiteralPath $PidFile -Encoding utf8
+@{ backend = $backendProc.Id; frontend = $frontendProc.Id; backendPort = $BackendPort; frontendPort = $FrontendPort } | ConvertTo-Json | Set-Content -LiteralPath $PidFile -Encoding utf8
 Write-Host "  backend window PID : $($backendProc.Id)"
 Write-Host "  frontend window PID: $($frontendProc.Id)"
 Write-Host "  PIDs saved to .dev-local.pids.json (use -Stop to kill)"
