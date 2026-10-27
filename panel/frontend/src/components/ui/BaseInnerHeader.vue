@@ -46,13 +46,15 @@
             :open="openSearch"
             :close="closeSearch"
             :clear="clearSearch"
+            :advanced-search="handleAdvancedSearchClick"
           >
             <BaseTooltip :text="searchTooltip" :disabled="isSearchOpen && !isFloatingActive">
               <div
                 class="group h-9 min-h-9 rounded-full flex items-center transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] select-none overflow-hidden whitespace-nowrap cursor-pointer"
                 :class="[
                   isSearchOpen && !isFloatingActive
-                    ? 'w-52 sm:w-64 md:w-72 bg-white-100 border border-primary-12 shadow-xs ring-2 ring-primary-100/10 focus-within:border-secondary-100 focus-within:ring-secondary-100/20 text-primary-100 cursor-default'
+                    ? (showAdvancedSearch ? 'w-64 sm:w-80 md:w-96' : 'w-52 sm:w-64 md:w-72') +
+                      ' bg-white-100 border border-primary-12 shadow-xs ring-2 ring-primary-100/10 focus-within:border-secondary-100 focus-within:ring-secondary-100/20 text-primary-100 cursor-default'
                     : isSearchOpen && isFloatingActive
                       ? 'w-9 bg-white-100 border border-secondary-100 shadow-xs ring-2 ring-secondary-100/20 text-secondary-100'
                       : 'w-9 hover:w-[96px] hover:pe-3 bg-primary-6 hover:bg-primary-12 text-primary-80 hover:text-primary-100 active:scale-95'
@@ -112,6 +114,20 @@
                   >
                     <Icon icon="solar:close-circle-bold" class="w-3.5 h-3.5" />
                   </button>
+
+                  <!-- Advanced Search Badge Button -->
+                  <slot name="advanced-search" :click="handleAdvancedSearchClick">
+                    <button
+                      v-if="showAdvancedSearch"
+                      type="button"
+                      class="inline-flex items-center gap-1 h-5.5 px-2 rounded-full text-2xs font-bold font-dots-1 select-none shrink-0 transition-all duration-200 cursor-pointer active:scale-95 outline-none whitespace-nowrap bg-secondary-8 hover:bg-secondary-16 text-secondary-100 border border-secondary-100/20 hover:border-secondary-100/30 me-1 shadow-2xs"
+                      :title="advancedSearchTooltip"
+                      @click.stop="handleAdvancedSearchClick"
+                    >
+                      <Icon icon="solar:tuning-2-linear" class="w-3 h-3 shrink-0" />
+                      <span>{{ advancedSearchLabel }}</span>
+                    </button>
+                  </slot>
 
                   <!-- Close / Collapse Button -->
                   <button
@@ -233,6 +249,20 @@
               >
                 <Icon icon="solar:close-circle-bold" class="w-4 h-4" />
               </button>
+
+              <!-- Advanced Search Badge Button (Mobile) -->
+              <slot name="advanced-search" :click="handleAdvancedSearchClick">
+                <button
+                  v-if="showAdvancedSearch"
+                  type="button"
+                  class="inline-flex items-center gap-1 h-6 px-2.5 rounded-full text-2xs font-bold font-dots-1 select-none shrink-0 transition-all duration-200 cursor-pointer active:scale-95 outline-none whitespace-nowrap bg-secondary-8 hover:bg-secondary-16 text-secondary-100 border border-secondary-100/20 hover:border-secondary-100/30 shadow-2xs"
+                  :title="advancedSearchTooltip"
+                  @click.stop="handleAdvancedSearchClick"
+                >
+                  <Icon icon="solar:tuning-2-linear" class="w-3.5 h-3.5 shrink-0" />
+                  <span>{{ advancedSearchLabel }}</span>
+                </button>
+              </slot>
 
               <!-- Modal Close Button (Circular, standard modal style) -->
               <button
@@ -373,6 +403,12 @@ const props = withDefaults(
     showHome?: boolean
     /** Show the search button & expanding input */
     showSearch?: boolean
+    /** Show advanced search badge button inside search input when expanded */
+    showAdvancedSearch?: boolean
+    /** Advanced search button label */
+    advancedSearchLabel?: string
+    /** Advanced search button tooltip */
+    advancedSearchTooltip?: string
     /** Search input value (v-model, v-model:search) */
     modelValue?: string
     search?: string
@@ -423,6 +459,9 @@ const props = withDefaults(
     parentPath: '',
     showHome: true,
     showSearch: true,
+    showAdvancedSearch: true,
+    advancedSearchLabel: 'جستجو پیشرفته',
+    advancedSearchTooltip: 'جستجو پیشرفته',
     modelValue: undefined,
     search: undefined,
     searchLabel: 'جستجو',
@@ -453,6 +492,7 @@ const emit = defineEmits<{
   (e: 'filter'): void
   (e: 'update:filterOpen', val: boolean): void
   (e: 'menu'): void
+  (e: 'advanced-search'): void
   (e: 'update:modelValue', val: string): void
   (e: 'update:search', val: string): void
   (e: 'update:searchOpen', val: boolean): void
@@ -470,12 +510,14 @@ defineSlots<{
   actions?: (props: {}) => any
   extra?: (props: {}) => any
   'filter-menu'?: (props: { close: () => void; isOpen: boolean }) => any
+  'advanced-search'?: (props: { click: () => void }) => any
   search?: (props: {
     isOpen: boolean
     query: string
     open: () => void
     close: () => void
     clear: () => void
+    advancedSearch: () => void
   }) => any
   'search-results'?: (props: {
     results: SearchResultItem[]
@@ -573,6 +615,10 @@ const openSearch = () => {
 
 const closeSearch = () => {
   isSearchOpen.value = false
+}
+
+const handleAdvancedSearchClick = () => {
+  emit('advanced-search')
 }
 
 const clearSearch = () => {

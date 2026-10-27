@@ -86,6 +86,28 @@ function Get-LanIp {
   return '127.0.0.1'
 }
 
+function Test-PortAvailable([int]$Port, [string]$Address = '0.0.0.0') {
+  try {
+    $listener = [System.Net.Sockets.TcpListener]::new([System.Net.IPAddress]::Parse($Address), $Port)
+    $listener.Start()
+    $listener.Stop()
+    return $true
+  } catch {
+    return $false
+  }
+}
+
+function Get-AvailablePort([int]$PreferredPort, [string]$Address = '0.0.0.0') {
+  $p = $PreferredPort
+  while ($p -lt ($PreferredPort + 200)) {
+    if ((Test-PortAvailable $p '0.0.0.0') -and (Test-PortAvailable $p '127.0.0.1')) {
+      return $p
+    }
+    $p++
+  }
+  return $PreferredPort
+}
+
 # ── Stop mode ──────────────────────────────────────────────
 if ($Stop) {
   Write-Step 'Stopping local dev processes...'
@@ -139,6 +161,18 @@ if (-not (Test-Path -LiteralPath $FrontendDir)) { throw "Frontend dir missing: $
 # works because the proxy hop runs on this PC; the frontend client itself
 # uses relative /api URLs (window.location.origin), so no frontend code change
 # is needed.
+$origFrontendPort = $FrontendPort
+$FrontendPort = Get-AvailablePort $FrontendPort
+if ($FrontendPort -ne $origFrontendPort) {
+  Write-Warning "Frontend port $origFrontendPort is unavailable (EACCES/in-use). Auto-switched to port $FrontendPort."
+}
+
+$origBackendPort = $BackendPort
+$BackendPort = Get-AvailablePort $BackendPort
+if ($BackendPort -ne $origBackendPort) {
+  Write-Warning "Backend port $origBackendPort is unavailable (EACCES/in-use). Auto-switched to port $BackendPort."
+}
+
 $BindHost = '127.0.0.1'
 if ($Lan -or $LanIp) {
   $Lan = $true
@@ -188,15 +222,25 @@ if (-not (Test-Path -LiteralPath $VenvPython)) {
 } else { Write-Step 'Venv exists, reusing' }
 
 if (-not $SkipInstall) {
-  $needsInstall = $false
-  try {
-    $null = & $VenvPython -c "import django" 2>&1
-    if ($LASTEXITCODE -ne 0) { $needsInstall = $true }
-  } catch { $needsInstall = $true }
+  $reqFile   = Join-Path $BackendDir 'requirements.txt'
+  $stampFile = Join-Path $VenvDir '.req.sha256'
+  $reqHash   = (Get-FileHash -LiteralPath $reqFile -Algorithm SHA256).Hash
+  $oldHash   = if (Test-Path -LiteralPath $stampFile) { (Get-Content -LiteralPath $stampFile -Raw).Trim() } else { '' }
+
+  $needsInstall = ($reqHash -ne $oldHash)
+  if (-not $needsInstall) {
+    try {
+      $null = & $VenvPython -c "import django, django_cryptography, pika" 2>&1
+      if ($LASTEXITCODE -ne 0) { $needsInstall = $true }
+    } catch { $needsInstall = $true }
+  }
 
   if ($needsInstall) {
     Write-Step 'Installing backend requirements (venv)'
-    & $VenvPython -m pip install -r (Join-Path $BackendDir 'requirements.txt')
+    & $VenvPython -m pip install -r $reqFile
+    if ($LASTEXITCODE -eq 0) {
+      $reqHash | Set-Content -LiteralPath $stampFile -Encoding ascii -NoNewline
+    }
   } else {
     Write-Host '  Backend dependencies already satisfied in venv.'
   }
@@ -204,10 +248,12 @@ if (-not $SkipInstall) {
 
 if (-not $NoMigrate) {
   Write-Step 'Running migrations (local sqlite)'
+  $dbExisted = Test-Path -LiteralPath $LocalDb
   Push-Location $BackendDir
   try {
     & $VenvPython 'manage.py' migrate --noinput
-    if (-not (Test-Path -LiteralPath $LocalDb)) {
+    if ($LASTEXITCODE -ne 0) { throw "Database migrations failed with exit code $LASTEXITCODE" }
+    if (-not $dbExisted) {
       Write-Step 'Loading geo data via local helper'
       try { & $VenvPython (Join-Path $Root 'load-geo-local.py') }
       catch { Write-Warning "geo load skipped/failed: $_" }

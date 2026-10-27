@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-25",
+  "target": "FARO_VIDEO_PRODUCTION_HANDBOOK_FA.html",
+  "method": "Local HTML inspected in the in-app browser through cua_repl",
+  "document_only": true,
+  "faro_application_executed": false,
+  "checks": {
+    "persian_rtl_opening_visually_inspected": true,
+    "scenario_metadata_visually_inspected": true,
+    "responsive_step_layout_visually_inspected": true,
+    "scenario_section_count": 42,
+    "search_query": "چک‌لیست",
+    "search_visible_scenarios": 2,
+    "clear_filter_restores_scenarios": 42,
+    "navigation_anchor_v24_verified": true,
+    "all_table_rows_match_header_column_counts": true,
+    "page_has_no_horizontal_overflow_at_1280px": true,
+    "font_embedded_in_final_html": true
+  },
+  "limits": "Representative visual checks and DOM structure checks were performed. Print pagination, every possible viewport, voice read-through, and Faro runtime workflows were not tested."
+}

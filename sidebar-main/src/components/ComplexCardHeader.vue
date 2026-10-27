@@ -1,7 +1,8 @@
 <template>
   <div
-    class="pnd-row pnd-m-0 pnd-d-flex pnd-align-items-center pnd-justify-content-center"
-    style="direction: rtl; flex-wrap: nowrap"
+    class="complex-card-header pnd-m-0"
+    :class="{ 'has-extra': $slots.default }"
+    style="direction: rtl"
   >
     <div
       :class="[
@@ -15,11 +16,11 @@
       <PSvg v-if="isPSvg" :svg="props.startIcon" />
       <IconSvg v-else :name="props.startIcon"></IconSvg>
     </div>
-    <div class="col p-0 pnd-d-flex pnd-flex-column" style="margin-right: 12px">
-      <span class="col-12 p-0 text-title pnd-text-start">{{
+    <div class="header-content pnd-d-flex pnd-flex-column">
+      <span class="text-title pnd-text-start">{{
         props.title
       }}</span>
-      <div class="col-12 p-0 text-subtitle pnd-text-start">
+      <div class="text-subtitle pnd-text-start">
         {{ props.subtitle }}
       </div>
     </div>
@@ -73,11 +74,42 @@ const isPSvg = computed(() => {
 </script>
 
 <style scoped>
+.complex-card-header {
+  display: grid !important;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: 12px;
+  width: auto;
+  box-sizing: border-box;
+}
+
+.complex-card-header.has-extra {
+  grid-template-columns: auto minmax(0, 1fr) auto;
+}
+
+.start-header-icon {
+  flex-shrink: 0;
+}
+
 .clickable-icon {
   cursor: pointer !important;
 }
+
+.header-content {
+  min-width: 0;
+  overflow: hidden;
+}
+
+.header-content .text-title,
+.header-content .text-subtitle {
+  width: 100%;
+}
+
 .header-extra {
-  margin-right: auto;
+  justify-self: end;
+  display: flex;
+  align-items: center;
   flex-shrink: 0;
+  min-width: 0;
 }
 </style>

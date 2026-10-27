@@ -1,0 +1,121 @@
+{
+  "date": "2026-10-25",
+  "version": "0.1.3+13",
+  "commit": "4086c13de71103f780841d4333bb861b5ab3de73",
+  "scenario_count": 42,
+  "hesabro_one_scenario_count": 28,
+  "hesabro_one_frontend_commit": "d68a40f4af3c7f8528e7ef124e9c48baf099d465",
+  "total_video_count": 70,
+  "feature_count": 92,
+  "source_anchor_count": 105,
+  "ui_control_occurrences": 1950,
+  "recording_seconds": 2545,
+  "runtime_ui_tested": false,
+  "repo_tests_run": false,
+  "checks": [
+    {
+      "check": "حداقل پانزده سناریوی مستقل",
+      "passed": true
+    },
+    {
+      "check": "فهرست سناریوهای حسابرو وان با شناسه یکتا",
+      "passed": true
+    },
+    {
+      "check": "همه شواهد حسابرو وان به فایل موجود وصل هستند",
+      "passed": true
+    },
+    {
+      "check": "شناسه یکتای سناریوها",
+      "passed": true
+    },
+    {
+      "check": "شناسه یکتای قابلیت‌ها",
+      "passed": true
+    },
+    {
+      "check": "شاهد معتبر فایل و خط برای تمام سناریوها",
+      "passed": true
+    },
+    {
+      "check": "ساختار A تا G برای همه سناریوها",
+      "passed": true
+    },
+    {
+      "check": "جمع مدت بخش‌ها برابر مدت هدف",
+      "passed": true
+    },
+    {
+      "check": "زمان مثبت تمام مرحله‌ها",
+      "passed": true
+    },
+    {
+      "check": "هوک‌های غیرتکراری",
+      "passed": true
+    },
+    {
+      "check": "برآورد نریشن حداکثر ۲٫۷ واژه در ثانیه",
+      "passed": true
+    },
+    {
+      "check": "بدون placeholder تولید سند",
+      "passed": true
+    },
+    {
+      "check": "تعداد بخش‌های HTML برابر سناریوها",
+      "passed": true
+    },
+    {
+      "check": "تب، سناریوها و دکمهٔ کپی حسابرو وان در HTML",
+      "passed": true
+    },
+    {
+      "check": "بدون منبع راه دور در HTML",
+      "passed": true
+    },
+    {
+      "check": "عناوین ستون جدول مرحله‌ها",
+      "passed": true
+    },
+    {
+      "check": "کپی نریشن همه ویدیوها",
+      "passed": true
+    },
+    {
+      "check": "فهرست کپی عنوان و توضیح همه ویدیوها",
+      "passed": true
+    },
+    {
+      "check": "کپی فهرست به کلیپ‌بورد",
+      "passed": true
+    },
+    {
+      "check": "راهنمای ساده همه ویدیوها",
+      "passed": true
+    },
+    {
+      "check": "کپی در فایل محلی",
+      "passed": true
+    },
+    {
+      "check": "فایل نمونه کوچک و در حد نامه",
+      "passed": true
+    }
+  ],
+  "counts_by_module": {
+    "شروع کار": 1,
+    "فضای کاری": 4,
+    "تنظیمات": 1,
+    "حساب کاربری": 2,
+    "پروژه‌ها": 4,
+    "هوش مصنوعی": 5,
+    "گفت‌وگو": 6,
+    "گفت‌وگو و هوش مصنوعی": 1,
+    "وظایف": 5,
+    "بورد پروژه": 2,
+    "نامه‌ها": 7,
+    "جست‌وجو": 1,
+    "افزایش سرعت": 1,
+    "پروژه و هوش مصنوعی": 2
+  }
+}

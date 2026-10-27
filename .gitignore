@@ -1,12 +1,18 @@
 # Nested Git repositories (tracked independently)
 hesabro-one-backend-django/
 hesabro-one-frontend-vue/
+faro-chat-vue/
+faro-flutter/
+hamafzar-customer-widget/
 #panel/
 
 # Dependencies & Environments
 node_modules/
 .venv/
 .venv-local/
+__pycache__/
+*.pyc
+*.pyo
 
 # Local databases & secrets
 *.sqlite3

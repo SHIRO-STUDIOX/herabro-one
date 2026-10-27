@@ -1,0 +1,58 @@
+/* Custom View Transitions (Global) */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none !important;
+}
+
+::view-transition-old(widget-content) {
+  animation: 0.2s ease-in-out both hrn-fade-out;
+}
+::view-transition-new(widget-content) {
+  animation: 0.2s ease-in-out both hrn-fade-in;
+}
+
+/* Hero Thumbnail View Transition customization */
+::view-transition-group(hero-thumbnail) {
+  animation-duration: 0.38s;
+}
+
+::view-transition-group(hero-thumbnail),
+::view-transition-image-pair(hero-thumbnail),
+::view-transition-old(hero-thumbnail),
+::view-transition-new(hero-thumbnail) {
+  border-radius: 12px !important;
+  overflow: hidden !important;
+}
+
+@keyframes hrn-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes hrn-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes hrn-slide-to-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-20px);
+  }
+}
+@keyframes hrn-slide-from-right {
+  from {
+    transform: translateX(20px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

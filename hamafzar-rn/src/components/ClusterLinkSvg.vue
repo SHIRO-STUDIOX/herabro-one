@@ -1,0 +1,18 @@
+<template>
+  <svg
+    width="21"
+    height="9"
+    viewBox="0 0 21 9"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-5 h-[9px] shrink-0 transform-gpu"
+  >
+    <path
+      d="M20.5 0C20.5 2.20489 19.9798 3.90904 19.0283 5.20898C18.0779 6.50729 16.7324 7.35475 15.167 7.90918C12.0684 9.00658 7.97021 9 4 9H0V8H4C8.02977 8 11.9316 7.9934 14.833 6.96582C16.2674 6.45778 17.4221 5.71134 18.2217 4.61914C19.0201 3.52848 19.5 2.04499 19.5 0H20.5Z"
+      fill="currentColor"
+    />
+  </svg>
+</template>
+
+<script setup lang="ts">
+</script>
